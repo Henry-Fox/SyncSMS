@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 与品牌主色一致，用于自适应图标底层（圆角遮罩外缘） -->
+    <color name="ic_launcher_background">#107EF4</color>
+</resources>

@@ -1,0 +1,39 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3306/syncsms?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME:syncsms}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    repair-on-migrate: true
+    locations: classpath:db/migration
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+syncsms:
+  jwt:
+    secret: YourSuperSecretKeyForJwtTokenGenerationMustBeLongEnough2026SyncSMS
+    expiration: 86400000  # 24 hours in milliseconds
+
+  security:
+    # 密码错误达到阈值后要求验证码
+    captchaAfterFailures: 3
+    # 密码错误达到阈值后暂时锁定（分钟）
+    lockMinutes: 10
+    # 登录失败计数窗口（分钟）
+    failureWindowMinutes: 15

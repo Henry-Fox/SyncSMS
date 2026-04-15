@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 仅允许指定内网地址使用 HTTP 明文，避免全局放开 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- 你当前日志里的后端地址 -->
+        <domain includeSubdomains="false">10.10.0.75</domain>
+    </domain-config>
+</network-security-config>
+
