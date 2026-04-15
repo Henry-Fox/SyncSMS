@@ -64,8 +64,8 @@ npm run dev
 ## Android 端使用要点
 
 1. 在 App 中设置 `server` 为域名根地址，例如：
-   - ✅ `https://syncsms.menghengli.cn`
-   - ❌ `https://syncsms.menghengli.cn/api`（会导致路径变成 `/api/api/...`）
+   - ✅ `https://example.com`
+   - ❌ `https://example.com/api`（会导致路径变成 `/api/api/...`）
 2. **务必授予通知监听权限**（否则部分 ROM 无法同步验证码类短信）
 3. 建议把 App 加入电池白名单，允许后台运行，避免息屏后被系统杀进程
 
