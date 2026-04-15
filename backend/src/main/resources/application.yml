@@ -27,7 +27,7 @@ mybatis-plus:
 
 syncsms:
   jwt:
-    secret: YourSuperSecretKeyForJwtTokenGenerationMustBeLongEnough2026SyncSMS
+    secret: ${SYNCSMS_JWT_SECRET:YourSuperSecretKeyForJwtTokenGenerationMustBeLongEnough2026SyncSMS}
     expiration: 86400000  # 24 hours in milliseconds
 
   security:

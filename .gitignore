@@ -16,6 +16,8 @@ logs/
 backend/target/
 **/target/
 *.class
+backend/deps/
+backend/deps_baidu/
 
 ### Node / Vite
 frontend/node_modules/
@@ -37,4 +39,7 @@ android/local.properties
 **/.env.*
 !frontend/.env.example
 !backend/.env.example
+
+### Temp / local scripts
+tmp/
 
