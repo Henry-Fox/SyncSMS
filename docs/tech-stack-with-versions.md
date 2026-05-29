@@ -45,9 +45,9 @@
 
 ## 部署与访问约定
 
-- **域名**：`syncsms.menghengli.cn`
-- **Web**：`https://syncsms.menghengli.cn/`
-- **API**：`https://syncsms.menghengli.cn/api/*`（Nginx 反代到后端 `127.0.0.1:8081`）
+- **域名**：`example.com`（部署时替换为自己的域名）
+- **Web**：`https://example.com/`
+- **API**：`https://example.com/api/*`（Nginx 反代到后端 `127.0.0.1:8081`）
 
 # SyncSMS 技术栈与版本
 
